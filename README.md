@@ -41,6 +41,9 @@ We propose a Deep Learning Application that will be able to solve the above ment
 ## Using the deployed version of the web application
 Please download the <a href = "https://drive.google.com/drive/folders/10RaV7DTsFVgdYeJZIyveyeJKhfvFiKT2?usp=sharing">Model Checkpoints</a> and move the file to the <a href = "https://github.com/aryankargwal/capbot2.0/tree/main/camera">camera</a> folder.
 
+- Setting up the Python Environment with dependencies 
+
+        pip install -r requirements.txt
 - Cloning the Repository: 
 
         git clone https://github.com/aryankargwal/capbot2.0
@@ -56,6 +59,9 @@ Please download the <a href = "https://drive.google.com/drive/folders/10RaV7DTsF
 - Running the searching web application:
 
         streamlit run search.py
+- Stopping the web application from the terminal
+
+        Ctrl+C
         
 <hr>
 
