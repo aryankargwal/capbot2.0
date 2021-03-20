@@ -1,0 +1,14 @@
+streamlit==0.79.0
+numpy==1.19.2
+pandas==1.2.3
+torch==1.6.0
+torchvision==0.7.0
+tensorflow==2.4.0
+keras==2.4.3
+h5py==3.2.1
+Pillow==8.1.0
+opencv_python==4.5.1.48
+imageio==1.4
+nltk==3.5
+tqdm==4.59.0
+cryptography==3.3.1
