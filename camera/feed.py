@@ -1,3 +1,4 @@
+from caption_gen import *
 import streamlit as st
 import cv2
 import csv
@@ -5,16 +6,17 @@ from PIL import Image
 import pandas as pd
 import time
 from datetime import datetime
-
+import tempfile
+from imageio import imread
 
 # To display the webcam feed
 FRAME_WINDOW = st.image([])
 
 def run_app():
     # sidebar
-    st.sidebar.image("../../assets/logo.png")
+    # st.sidebar.image("../../assets/logo.png")
     st.sidebar.header("Log maker")
-    st.sidebar.subheader(
+    st.sidebar.markdown(
         "An interactive logging application to upload/connect camera to start the captioning and save the captions in an encrypted form for added secuirity."
     )
 
@@ -39,11 +41,14 @@ def run_app():
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         if(show_frame):
             FRAME_WINDOW.image(frame)
-        img = Image.fromarray(frame)
-        img = img.resize((224, 224))
-        pred = test(img)
+        # img = Image.fromarray(frame)
+        # img = img.resize((224, 224))
+        pred = cap_gen(frame)
+        print(pred)
         csvw.write(pred)
-        st.write(pred)
+        caption = ' '
+        caption.join(pred)
+        st.write(caption)
         time.sleep(5)
     vid.release()
     cv2.destroyAllWindows()
@@ -51,7 +56,6 @@ def run_app():
 
 def main():
     run_app()
-    # trial()
 
 
 @st.cache(show_spinner=False)
@@ -74,18 +78,13 @@ class CSVWorker:
         self.filename = "results.csv"
         self.create_csv()
 
-    def preprocess(self, text, tokenizer):
-        sequences = tokenizer.texts_to_sequences(text)
-        return sequences
-
     def create_csv(self):
         df = pd.DataFrame(list(), columns=self.fields)
         df.to_csv(self.filename)
 
     def write(self, pred):
         df = pd.read_csv(self.filename)
-        # pred = self.preprocess(pred, TOKENIZER)
-        pred = pred.split(" ")
+        pred = pred[1:-1]
         if len(pred) >= 10:
             entry = [
                 pred[0],
