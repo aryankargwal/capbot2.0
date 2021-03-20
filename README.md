@@ -37,6 +37,28 @@ We propose a Deep Learning Application that will be able to solve the above ment
 <i>Extra Feature</i>
 - [ ] CCTV Localization with results
 
+
+## Using the deployed version of the web application
+Please download the <a href = "https://drive.google.com/drive/folders/10RaV7DTsFVgdYeJZIyveyeJKhfvFiKT2?usp=sharing">Model Checkpoints</a> and move the file to the <a href = "https://github.com/aryankargwal/capbot2.0/tree/main/camera">camera</a> folder.
+
+- Cloning the Repository: 
+
+        git clone https://github.com/aryankargwal/capbot2.0
+- Entering the directory for captioning: 
+
+        cd capbot2.0/camera
+- Running the captioning web application:
+
+        streamlit run feed.py
+- Entering the directory for searching: 
+
+        cd capbot2.0/camera
+- Running the searching web application:
+
+        streamlit run search.py
+        
+<hr>
+
 ## License
 This project is under the Apache License. See [LICENSE](LICENSE) for Details.
 
