@@ -10,3 +10,4 @@ imageio==1.4
 nltk==3.5
 tqdm==4.59.0
 cryptography==3.4.6
+scikit-image==0.18.1
