@@ -73,4 +73,5 @@ footage_time = st.slider("", value=(time(9, 30), time(14, 45)))
 # button
 if st.button("Start Search"):
     row = search_word(data, keywords)
-    st.write(data.loc[[row], :])
+    for k in row:
+        st.write(data.loc[[k], :])

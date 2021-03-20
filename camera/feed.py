@@ -12,41 +12,48 @@ from imageio import imread
 # To display the webcam feed
 FRAME_WINDOW = st.image([])
 
+
 def run_app():
     # sidebar
-    # st.sidebar.image("../../assets/logo.png")
+    st.sidebar.image("../assets/logo.png")
     st.sidebar.header("Log maker")
     st.sidebar.markdown(
         "An interactive logging application to upload/connect camera to start the captioning and save the captions in an encrypted form for added secuirity."
     )
+    st.sidebar.markdown(
+        "[Github Repository](https://github.com/aryankargwal/capbot2.0)"
+    )
+    st.sidebar.markdown("[Proposal Video](https://www.youtube.com/watch?v=Sr8dNQMBRZI)")
 
     # source selector
     st.header("Select the source of the feed:")
     source = st.selectbox("", ("Live Camera", "Upload"))
 
     if source == "Upload":
-        video_file = st.file_uploader("surveillance feed", accept_multiple_files=False, type=['mp4'])
+        video_file = st.file_uploader(
+            "surveillance feed", accept_multiple_files=False, type=["mp4"]
+        )
         tfile = tempfile.NamedTemporaryFile(delete=False)
         if video_file is not None:
             tfile.write(video_file.read())
         vid = cv2.VideoCapture(tfile.name)
-    if source == "Live Camera":   
+    if source == "Live Camera":
         vid = cv2.VideoCapture(0)
     run = st.checkbox("Run", key="start")
     show_frame = st.checkbox("Show frames", key="frame")
     csvw = CSVWorker()
-    # Starts the app, when the button is clicked    
-    while(run):
+    # Starts the app, when the button is clicked
+    while run:
         _, frame = vid.read()
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        if(show_frame):
+        if show_frame:
             FRAME_WINDOW.image(frame)
         # img = Image.fromarray(frame)
         # img = img.resize((224, 224))
         pred = cap_gen(frame)
         print(pred)
         csvw.write(pred)
-        caption = ' '
+        caption = " "
         caption.join(pred)
         st.write(caption)
         time.sleep(5)
