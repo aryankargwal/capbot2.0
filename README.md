@@ -12,11 +12,12 @@ Present state-of-the-art Surveillance Devices require both consistent manual ass
 <br>
 
 ## Proposed Solution<br>
+<img src = "assets/cameraui.jpg" width = "500px"><br>
+<img src = "assets/search_tab.png" width = "500px"><br>
 We propose a Deep Learning Application that will be able to solve the above mentioned problems. 
 - Our application named ‘Cap-Bot’ is capable of running Image Captioning on multiple CCTV footages and storing the captions along with the camera number and the time of capture in a convenient log.<Br>
 - The file of saved captions can then be used to look up for incidents from any instant of time just by entering a few keywords.  The returned camera number and time slot can then be used to obtain the required CCTV footage.<br>
-<img src = "assets/cameraui.jpg" width = "500px"><br>
-<img src = "assets/search_tab.png" width = "500px"><br>
+
 ## Advantages and Features
 - Interface to map CCTV Location in a defined area and eventually help single out points of interest.<br>
 <img src = "assets/locations.png" width = "500px"><br>
