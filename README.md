@@ -12,23 +12,28 @@ We propose a Deep Learning Application that will be able to solve the above ment
 <img src = "assets/search_tab.png"><br>
 ## Advantages and Features
 - Interface to map CCTV Location in a defined area and eventually help single out points of interest.<br>
-<img src = "assets/locations.png">
+<img src = "assets/locations.png" style = "height: 500px"><br>
 - Since our model relies on Deep Learning, the time can be reduced considerably as we are resorting to an automatic searching operation.<br>
-<img src = "assets/dl.png">
+<img src = "assets/dl.png"><br>
 - Since the information is purely textual, the encryption of information is way easier than pictorial.<br>
-<img src = "assets/encrypt.png">
+<img src = "assets/encrypt.png"><br>
+  
 ## Steps of Deployment
-abc
+- [x] Training the Model
+- [x] Write the Search Module
+- [ ] Captioning UI
+- [x] Search UI
+- [ ] Perfecting Search feature 
+- [ ] Resolving Backend
+- [ ] Encryption of Generation Captions<br>
+<i>Extra Feature</i>
+- [ ] CCTV Localization with results
 ## License
 This project is under the Apache License. See [LICENSE](LICENSE) for Details.
 ## Contributors
 
 <table>
 <tr align="center">
-
-
-
-
 <td>
 
 Aryan Kargwal
@@ -88,12 +93,6 @@ Srijarko Roy
 </a>
 </p>
 </td>
-
-
-
-
-
-
   </table>
 </tr>
   </table>
