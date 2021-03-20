@@ -1,3 +1,4 @@
+from cryptography.fernet import Fernet
 fernet = Fernet(key) 
  
 with open('result.csv', 'rb') as enc_file: 
