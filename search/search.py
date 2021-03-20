@@ -9,6 +9,7 @@ import time
 import os
 import numpy as np
 from datetime import time
+from search_word import search_word
 
 
 # sidebar
@@ -62,9 +63,14 @@ st.header("Searching Logs")
 
 # keywords
 st.subheader("Enter the keywords of the incident")
-st.text_input("")
+keywords = st.text_input("")
+keywords = keywords.split(sep=" ")
+list(keywords)
+
 # time
 st.subheader("The time where the incident might have occured")
 footage_time = st.slider("", value=(time(9, 30), time(14, 45)))
 # button
-st.button("Start Search")
+if st.button("Start Search"):
+    row = search_word(data, keywords)
+    st.write(data.loc[[row], :])
