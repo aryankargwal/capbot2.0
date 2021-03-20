@@ -52,7 +52,7 @@ Please download the <a href = "https://drive.google.com/drive/folders/10RaV7DTsF
         streamlit run feed.py
 - Entering the directory for searching: 
 
-        cd capbot2.0/camera
+        cd capbot2.0/search
 - Running the searching web application:
 
         streamlit run search.py
