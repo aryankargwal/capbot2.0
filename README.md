@@ -1,10 +1,16 @@
 # capbot-siic
 Repository to hold code for the [cap-bot](https://github.com/aryankargwal/cap-bot) varient that is being presented at the SIIC Defence Hackathon 2021.
 <br>
+
 ## Problem Inspiration<br>
 <img src="assets/cctv_system.jpg" width = "500px"><br>
 A plethora of surveillance devices are being used by the Defense Services for supervision and monitoring. However, most of them are manually operated at the cost of enormous amounts of time and manual labour.
 <br>
+
+## Problem Description<br>
+Present state-of-the-art Surveillance Devices require both consistent manual assistance and time for their successful operation. This results in a considerable loss of manual and technical resources.
+<br>
+
 ## Proposed Solution<br>
 We propose a Deep Learning Application that will be able to solve the above mentioned problems. 
 - Our application named ‘Cap-Bot’ is capable of running Image Captioning on multiple CCTV footages and storing the captions along with the camera number and the time of capture in a convenient log.<Br>
@@ -28,8 +34,10 @@ We propose a Deep Learning Application that will be able to solve the above ment
 - [ ] Encryption of Generation Captions<br>
 <i>Extra Feature</i>
 - [ ] CCTV Localization with results
+
 ## License
 This project is under the Apache License. See [LICENSE](LICENSE) for Details.
+
 ## Contributors
 
 <table>
