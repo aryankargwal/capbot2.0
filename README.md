@@ -23,8 +23,8 @@ We propose a Deep Learning Application that will be able to solve the above ment
 - [x] Write the Search Module
 - [ ] Captioning UI
 - [x] Search UI
-- [ ] Perfecting Search feature 
-- [ ] Resolving Backend
+- [x] Perfecting Search feature 
+- [x] Resolving Backend
 - [ ] Encryption of Generation Captions<br>
 <i>Extra Feature</i>
 - [ ] CCTV Localization with results
