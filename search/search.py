@@ -4,7 +4,6 @@ import cv2
 import csv
 from PIL import Image
 import pandas as pd
-from tensorflow.keras.preprocessing.text import Tokenizer
 import time
 import os
 import numpy as np
